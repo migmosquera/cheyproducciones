@@ -157,7 +157,7 @@ function Controller() {
     this.deleteVideo = function(event){
     	console.log(event.data.id);
     	var hr = new XMLHttpRequest();
-    	var url = "/cheyproducion/controller/deleteVideo.php";
+    	var url = "/cheyproducciones/controller/deleteVideo.php";
 	    var vars = "idVideoData="+event.data.id ;
 	    hr.open("POST", url, true);
 	    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -210,7 +210,7 @@ function Controller() {
     
     this.deleteSong = function(event){
     	var hr = new XMLHttpRequest();
-    	var url = "/cheyproducion/controller/deleteSong.php";
+    	var url = "/cheyproducciones/controller/deleteSong.php";
 	    var vars = "idSongData="+$(event.data.id)[0].children[0].id;
 	    hr.open("POST", url, true);
 	    hr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
