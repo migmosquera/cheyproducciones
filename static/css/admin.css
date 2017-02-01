@@ -1,0 +1,25 @@
+.container_admin{
+	width: 90%; 
+	margin: 0 auto;
+}
+
+.container_form{
+	width: 49%; 
+	display: inline-block; 
+	text-align: center
+}
+
+.title_admin{
+	text-align: center; 
+	color: cornflowerblue;
+}
+
+.sub_title{
+	display: inline-block; 
+	width: 50%; 
+	margin-bottom: 5px;
+}
+
+.thumb-video{
+	width: 213px
+}
