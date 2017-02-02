@@ -5,9 +5,11 @@ class Song {
 	private $name;
 	private $id_user;
 	private $date_song;
+        private $id_cd;
 	private $url_song;
 	private $tipo_song;
 	private $artista;
+        private $autoplay_song;
 	const TABLA = 'song';
 
 	public function getId() {
@@ -33,6 +35,22 @@ class Song {
 	public function setDateSong($date_song) {
 		$this -> date_song = $date_song;
 	}
+        
+        public function getIdCd() {
+		return $this -> id_cd;
+	}
+
+	public function setIdCd($idCD) {
+		$this -> id_cd = $idCD;
+	}
+        
+        public function getUrlSong() {
+		return $this -> url_song;
+	}
+
+	public function setUrlSong($urlSong) {
+		$this -> url_song = $urlSong;
+	}
 	
 	public function getTypeSong() {
 		return $this -> tipo_song;
@@ -49,16 +67,28 @@ class Song {
 	public function setArtista($artista) {
 		$this -> artista = $artista;
 	}
+        
+        public function getAutoplaySong() {
+		return $this -> autoplay_song;
+	}
+
+	public function setAutoplaySong($autoplaySong) {
+		$this -> autoplay_song = $autoplaySong;
+	}
+        
+       
 
 	
-	public function __construct($name, $id_user, $date_song, $url_song, $tipo_song, $artista, $id = null) {
+	public function __construct($name, $id_user, $date_song, $idCd,$url_song, $tipo_song, $artista, $autoplaySong, $id = null) {
 		$this -> id = $id;
 		$this -> name = $name;
 		$this -> id_user = $id_user;
 		$this -> date_song = $date_song;
+                $this -> id_cd = $idCd;
 		$this -> url_song = $url_song;
-		$this -> tipo_song = $tipo_song_song;
+		$this -> tipo_song = $tipo_song;
 		$this -> artista = $artista;
+                $this -> autoplay_song = $autoplaySong;
 	}
 
 	public static function registerSong($song,$idUser,$url_song,$tipo_song,$artista,$id_cd)

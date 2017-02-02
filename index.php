@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 	include 'controller/searchAllUser.php';
+        include_once 'controller/showAllSong.php';
 ?>
 <html lang="en">
 <head>
@@ -20,7 +21,11 @@
 
 <body>
     <header id="home" class="imageHeader">
-        
+        <div style="position: absolute; z-index: 1;top: 85%;">
+            <div id="pauseAudio" >Pause</div>
+            <div id="playAudio" >Play</div>
+            <video id="videoTap" src="<?php echo $song[0]["url_song"] ; ?>" autoplay controls style="display:none" ></video>
+        </div>
     </header>
     
     <section id="features">
@@ -939,5 +944,6 @@
     <script src="static/js/jquery.inview.min.js"></script>
     <script src="static/js/wow.min.js"></script>
     <script src="static/js/main.js"></script>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
