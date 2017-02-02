@@ -32,6 +32,14 @@ function View() {
     	$("#visibleContainer").addClass('labelHide');
     }
     
+    $("#visible_modal").on('click',function(){
+    	if ($(this)[0].checked == true ){
+    		$(this)[0].value = '1';
+    	}else{
+    		$(this)[0].value = '0';
+    	}
+    });
+    
     $("#validateUrl").on('click', function(){
     	var url = $("#url").val();
     	controller.validate(url);
@@ -125,6 +133,33 @@ function View() {
                           $("<img />", {
                             "src": e.target.result,
                             "class": "thumb-image"
+                        }).appendTo(image_holder);
+                    };
+                    image_holder.show();
+                    reader.readAsDataURL($(this)[0].files[i]);
+                }
+            } else {
+            }
+        }
+      
+    });
+    
+     $("#fileToUploadImg").on('change', function() {
+		console.log('paso por aqui');
+        var countFiles = $(this)[0].files.length;
+        var imgPath = $(this)[0].value;
+        var extn = imgPath.substring(imgPath.lastIndexOf('.') + 1).toLowerCase();
+        var image_holder = $("#imgContainer");
+        image_holder.empty();
+        if (extn == "png" || extn == "jpg" || extn == "jpeg") {
+            if (typeof(FileReader) != "undefined") {
+                for (var i = 0; i < countFiles; i++) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                          $("<img />", {
+                            "src": e.target.result,
+                            "class": "thumb-image",
+                            "style": "width:150px",
                         }).appendTo(image_holder);
                     };
                     image_holder.show();

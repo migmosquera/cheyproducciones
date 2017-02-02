@@ -11,6 +11,12 @@ class Users {
 	private $url_instagram;
 	private $url_facebook;
 	private $url_youtube;
+        private $activate_modal;
+        private $text_modal;
+        private $img_modal;
+        private $start_date;
+        private $expire_date;
+        private $title_modal;
 	const TABLA = 'user';
 
 	public function getId() {
@@ -88,9 +94,57 @@ class Users {
 	public function setUrlYoutube($url_youtube) {
 		$this -> url_youtube = $url_youtube;
 	}
+        
+        public function getActivateModal() {
+		return $this -> activate_modal;
+	}
+
+	public function setActivateModal($activate_modal) {
+		$this -> activate_modal = $activate_modal;
+	}
+        
+        public function getTextModal() {
+		return $this -> text_modal;
+	}
+
+	public function setTextModal($text_modal) {
+		$this -> text_modal = $text_modal;
+	}
+        
+        public function getImgModal() {
+		return $this -> img_modal;
+	}
+
+	public function setImgModal($img_modal) {
+		$this -> img_modal = $img_modal;
+	}
+        
+        public function getStarDate() {
+		return $this -> start_date;
+	}
+
+	public function setStarDate($star_date) {
+		$this -> start_date = $star_date;
+	}
+        
+        public function getExpireDate() {
+		return $this -> expire_date;
+	}
+
+	public function setExpireDate($expire_date) {
+		$this -> expire_date = $expire_date;
+	}
+        
+        public function getTitleModal() {
+		return $this -> title_modal;
+	}
+        
+        public function setTitleModal($title_modal) {
+		$this -> title_modal = $title_modal;
+	}
 
 
-	public function __construct($name, $email, $phone, $username, $password, $visible_video, $url_instagram, $url_facebook, $url_youtube, $id = null) {
+	public function __construct($name, $email, $phone, $username, $password, $visible_video, $url_instagram, $url_facebook, $url_youtube, $activate_modal, $text_modal, $img_modal, $start_date, $expire_date, $title_modal, $id = null) {
 		$this -> name = $name;
 		$this -> email = $email;
 		$this -> phone = $phone;
@@ -100,6 +154,12 @@ class Users {
 		$this -> url_instagram = $url_instagram;
 		$this -> url_facebook = $url_facebook;
 		$this -> url_youtube = $url_youtube;
+                $this -> activate_modal = $activate_modal;
+                $this -> text_modal = $text_modal;
+                $this -> img_modal = $img_modal;
+                $this -> start_date = $start_date;
+                $this -> expire_date = $expire_date;
+                $this -> title_modal = $title_modal;
 		$this -> id = $id;
 	}
 
@@ -111,7 +171,7 @@ class Users {
 		$query -> execute();
 		$data = $query -> fetch();
 		if ($data) {
-			return new self($data['name'], $data['email'], $data['phone'], $data['username'], $data['password'], $data['visible_video'], $data['url_instagram'], $data['url_facebook'], $data['url_youtube'] ,$data['iduser']);
+			return new self($data['name'], $data['email'], $data['phone'], $data['username'], $data['password'], $data['visible_video'], $data['url_instagram'], $data['url_facebook'], $data['url_youtube'], $data['activate_modal'] , $data['text_modal'] , $data['img_modal'] , $data['start_date'] , $data['expire_date'] , $data['title_modal'] ,$data['iduser']);
 		} else {
 			return FALSE;
 		}
@@ -150,10 +210,24 @@ class Users {
 		$query -> execute();
 		$data = $query -> fetch();
 		if ($data) {
-			return new self($data['name'], $data['email'], $data['phone'], $data['username'], $data['password'], $data['visible_video'], $data['url_instagram'], $data['url_facebook'], $data['url_youtube'] ,$id);
+			return new self($data['name'], $data['email'], $data['phone'], $data['username'], $data['password'], $data['visible_video'], $data['url_instagram'], $data['url_facebook'], $data['url_youtube'], $data['activate_modal'] , $data['text_modal'] , $data['img_modal'] , $data['start_date'] , $data['expire_date'] , $data['title_modal'] ,$id);
 		} else {
 			return FALSE;
 		}
+		$conectar = null;
+	}
+        
+        public static function createModal($id,$activate_modal,$title_modal,$text_modal,$url_modal) {
+		$conectar = new Conectar();
+                $date_start = date('Y-m-d'.' h:i:s');
+		$query = $conectar -> prepare('UPDATE ' . self::TABLA . ' SET activate_modal = :activate_modal, text_modal = :text_modal, img_modal = :url_modal, start_date = :date_start, title_modal = :title_modal WHERE iduser = :id');
+		$query -> bindParam(':id', $id);
+                $query -> bindParam(':activate_modal', $activate_modal);
+                $query -> bindParam(':title_modal', $title_modal);
+                $query -> bindParam(':text_modal', $text_modal);
+                $query -> bindParam(':url_modal', $url_modal);
+                $query -> bindParam(':date_start', $date_start);
+		$query -> execute();
 		$conectar = null;
 	}
 
