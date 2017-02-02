@@ -32,7 +32,7 @@
         <div id="content" class="content">
             <div class="contMenu">
                 <p id="openMenu" class="openMenu">MENU</p>  
-                <div style="position: absolute; z-index: 1;width: 10%; color: #fff">
+                <div class="buttonMusic">
                     <div id="pauseAudio" >Pause</div>
                     <div id="playAudio" >Play</div>
                     <video id="videoTap" src="<?php echo $song[0]["url_song"] ; ?>" autoplay controls style="display:none" ></video>
