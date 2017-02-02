@@ -6,6 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="CheyPoducciones" content="pagina de musica venezolana">
     <meta name="robots" content="musica, barquisimeto, venezuela">
     <title>CheyPoducciones</title>
@@ -18,13 +19,25 @@
     <link href="static/css/responsive.css" rel="stylesheet">
   
 </head>
-
 <body>
-    <header id="home" class="imageHeader">
-        <div style="position: absolute; z-index: 1;top: 85%;">
-            <div id="pauseAudio" >Pause</div>
-            <div id="playAudio" >Play</div>
-            <video id="videoTap" src="<?php echo $song[0]["url_song"] ; ?>" autoplay controls style="display:none" ></video>
+    <header id="header" style="width: 100%; height: 990px">
+        <div class="menu">
+            <ul>
+                <li>Home</li>
+                <li>Groups</li>
+                <li>Network</li>
+                <li>Dashboard</li>
+            </ul>
+        </div>
+        <div id="content" class="content">
+            <div class="contMenu">
+                <p id="openMenu" class="openMenu">MENU</p>  
+                <div style="position: absolute; z-index: 1;width: 10%; color: #fff">
+                    <div id="pauseAudio" >Pause</div>
+                    <div id="playAudio" >Play</div>
+                    <video id="videoTap" src="<?php echo $song[0]["url_song"] ; ?>" autoplay controls style="display:none" ></video>
+                </div>
+            </div>
         </div>
     </header>
     

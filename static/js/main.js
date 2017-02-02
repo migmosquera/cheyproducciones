@@ -13,6 +13,18 @@ jQuery(function($) {'use strict';
 
 	 	$(this).closest('.panel-heading').toggleClass('active');
 	});
+        
+        //menu
+        $(document).ready(function(){
+            var open = document.getElementById("openMenu");
+           
+            
+            open.onclick = function(){
+                document.getElementById('content').classList.toggle('slide-content');
+            };
+            
+           
+        });
 
 	//Slider
 	$(document).ready(function() {
