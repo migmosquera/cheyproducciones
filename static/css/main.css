@@ -2949,7 +2949,7 @@ table.alt tfoot {
     -ms-transition: opacity 0.5s ease;
     transition: opacity 0.5s ease;
     opacity: 1;
-    padding-top: 3em;
+    
 }
 
 #page-wrapper:before {
@@ -3741,100 +3741,6 @@ ul.nostyle i {
         transform: scale(1);
     }
 }
-
-/*START MENU*/
-/*.content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.menu {
-    background: #000;
-    width: 330px;
-    position: absolute;
-    height: 100%;
-    padding-top: 5%;
-    -webkit-transition: all ease 0.2s;
-    -moz-transition: all ease 0.2s;
-    -ms-transition: all ease 0.2s;
-    -o-transition: all ease 0.2s;
-    transition: all ease 0.2s;
-}
-
-.slide-content{
-    -webkit-transform: translate(330px, 0);
-    -moz-transform: translate(330px, 0);
-    -ms-transform: translate(330px, 0);
-    -o-transform: translate(330px, 0);
-    transform: translate(330px, 0);
-}
-
-.content{
-    
-    -webkit-transition: all ease 0.2s;
-    -moz-transition: all ease 0.2s;
-    -ms-transition: all ease 0.2s;
-    -o-transition: all ease 0.2s;
-    transition: all ease 0.2s;
-}
-
-.idioma {
-    margin: 0 auto;
-    display: inline-block;
-    letter-spacing: 0.225em;
-    text-transform: uppercase;
-    font-size: 18px;
-    float: right;
-    margin-right: 30px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.itemMenu {
-    color: #fff;
-    font-size: 18px;
-    margin: 0 auto;
-    cursor: pointer;
-    padding: 10px;
-    text-align: center;
-    display: inline-block;
-    margin-left: 30px;
-    letter-spacing: 0.225em;
-    text-transform: uppercase;
-}
-
-.contMenu {
-    width: 100%;
-    display: block;
-    background: transparent;
-}
-
-.buttonMusic{
-    width: 10%;
-    color: #fff;
-    display: inline-block;
-}
-
-li{
-    color: #fff;
-    font-size: 15px;
-    line-height: 100px;
-    list-style: none;
-    border-bottom: 1px solid #5c5c5c;
-    text-align: center;
-    text-transform: uppercase;
-    cursor: pointer
-}
-
-li:hover{
-    background: #222;
-}
-
-::-webkit-scrollbar {
-    width: 0;
-}*/
-/*END MENU*/
 
 /*start home*/
 .imgHome{

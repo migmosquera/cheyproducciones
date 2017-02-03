@@ -5,10 +5,9 @@ include_once 'controller/showAllSong.php';
 ?>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="CheyPoducciones" content="pagina de musica venezolana">
-        <meta name="robots" content="musica, barquisimeto, venezuela">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="" />
         <title>CheyPoducciones</title>
         <!--<link href="static/css/bootstrap.min.css" rel="stylesheet">
         <link href="static/css/font-awesome.min.css" rel="stylesheet">
@@ -39,12 +38,7 @@ include_once 'controller/showAllSong.php';
                         </li>
                     </ul>
                 </nav>      
-                <!--<div id="content" class="content">
-                    <div class="contMenu">
-                        <p id="openMenu" class="itemMenu">menu</p>  
-                        <p id="language" class="idioma">esp | eng</p>
-                    </div>
-                    <div class="buttonMusic">
+                <!--<div class="buttonMusic">
                         <div id="pauseAudio" >Pause</div>
                         <div id="playAudio" >Play</div>
                         <video id="videoTap" src="<?php echo $song[0]["url_song"]; ?>" autoplay controls style="display:none" ></video>
