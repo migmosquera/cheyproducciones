@@ -23,7 +23,11 @@ include_once 'controller/showAllSong.php';
     <body>
         <div id="page-wrapper">
             <header id="header" class="alt">
-                <h1><a href="index.php">CheyPoducciones</a></h1>
+                <div id="logo" class="cont_logo">    
+                    <img src="../cheyproducciones/static/images/header/logochey.png" style="width: 5%; margin-left: 30px">
+                    <p id="language" class="language">es | en</p>
+                </div>
+                <h1><a href="index.php"><img src="../cheyproducciones/static/images/header/LOGOCHEY174POR39.png" style=" padding: 10px"></a></h1>
                 <nav id="nav">
                     <ul>
                         <li class="special">
@@ -960,13 +964,24 @@ include_once 'controller/showAllSong.php';
                 </div>
             </div>
         </footer>-->
-
+        
+        <div id="showModal" style="    position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;overflow: auto;z-index: 1;padding: 20px;box-sizing: border-box;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.75);text-align: center;">
+            <div rel="modal:open"  style="display: block; top: 22%;bottom: 20%;overflow: hidden;left: 32%;width: 500px !important;height: 450px;background-color: #ffffff;position: fixed;border-radius: 8px;">
+                <p style="color: #000000;margin-top: 15px;"><?php echo $user->getTitleModal() ?></p>
+                <img src="<?php echo $user->getImgModal() ?>" />
+                <p style="color: #000000"><?php echo $user->getTextModal() ?></p>
+            </div>
+        </div>    
+    
+        <script>
+            var showModal = "<?php echo $user->getActivateModal() ?>"
+        </script>
         <!--<script src="static/js/jquery.js"></script>
         <script src="static/js/bootstrap.min.js"></script>-->
         <script src="static/js/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+        
   	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="static/js/jquery.modal.min.js"></script>
         <!--<script src="static/js/mousescroll.js"></script>
         <script src="static/js/smoothscroll.js"></script>
         <script src="static/js/jquery.prettyPhoto.js"></script>
@@ -978,6 +993,6 @@ include_once 'controller/showAllSong.php';
         <script src="static/js/skel.min.js"></script>
         <script src="static/js/util.js"></script>
         <script src="static/js/main.js"></script>
-        <!--<script src="static/js/index.js"></script>-->
+        <script src="static/js/index.js"></script>
     </body>
 </html>

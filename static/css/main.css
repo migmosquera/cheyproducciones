@@ -1411,7 +1411,7 @@ body {
 }
 
 body {
-    background: #2e3842;
+    background: rgba(0,0,0,0.6);
 }
 
 body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -3069,7 +3069,7 @@ body.is-menu-visible #menu {
     -webkit-transition: background-color 0.2s ease;
     -ms-transition: background-color 0.2s ease;
     transition: background-color 0.2s ease;
-    background: #2e3842;
+    background: #fff;
     height: 3em;
     left: 0;
     line-height: 3em;
@@ -3089,6 +3089,7 @@ body.is-menu-visible #menu {
     line-height: inherit;
     position: absolute;
     top: 0;
+    margin: 0 auto;
 }
 
 #header h1 a {
@@ -3128,7 +3129,7 @@ body.is-menu-visible #menu {
 
 #header nav > ul > li > a {
     border: 0;
-    color: #fff;
+    color: #000;
     display: block;
     font-size: 0.8em;
     letter-spacing: 0.225em;
@@ -3174,6 +3175,21 @@ body.is-menu-visible #menu {
 
 #header nav > ul > li:first-child {
     margin-left: 0;
+}
+
+.cont_logo {
+    display: block;
+    margin-top: 30px;
+}
+
+.language {
+    display: inline-block;
+    border: 0;
+    color: #000;
+    font-size: 0.8em;
+    letter-spacing: 0.225em;
+    padding: 0 1.5em;
+    text-transform: uppercase;
 }
 
 #header.alt {
@@ -3326,7 +3342,7 @@ body.is-menu-visible #menu {
     -ms-transition-delay: 1.25s;
     transition-delay: 1.25s;
     content: '';
-    background: #2e3842;
+    background: rgba(0,0,0,0.6);
     display: block;
     width: 100%;
     height: 100%;
@@ -3744,7 +3760,7 @@ ul.nostyle i {
 
 /*start home*/
 .imgHome{
-    background-image: url("../images/header/header.jpg");
+    background-image: url("../images/header/fondo.png");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -4358,3 +4374,20 @@ ul.nostyle i {
     box-shadow: none;
     -webkit-box-shadow: none;
 }*/
+
+/*STYLE MODAL*/
+.close-modal{
+    bottom: 2%;
+    position: fixed;
+    margin: 0 auto;
+    left: 82%;
+    text-decoration: none !important;
+    border: 0;
+    color: #ffffff;
+}  
+.close-modal::hove{
+    color: #ffffff;
+}
+a:hover, a:focus{
+    color: #ffffff;
+}

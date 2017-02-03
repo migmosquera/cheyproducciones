@@ -213,8 +213,10 @@
                 $wrapper = $('#page-wrapper'),
                 $banner = $('#banner'),
                 $header = $('#header');
-
+                
+                
         // Disable animations/transitions until the page has loaded.
+      
         $body.addClass('is-loading');
 
         $window.on('load', function () {
@@ -271,7 +273,6 @@
         // Header.
         if (skel.vars.IEVersion < 9)
             $header.removeClass('alt');
-
         if ($banner.length > 0
                 && $header.hasClass('alt')) {
 
@@ -283,12 +284,15 @@
                 bottom: $header.outerHeight() + 1,
                 terminate: function () {
                     $header.removeClass('alt');
+                    $("#logo").show();
                 },
                 enter: function () {
                     $header.addClass('alt');
+                    $("#logo").show();
                 },
                 leave: function () {
                     $header.removeClass('alt');
+                    $("#logo").hide();
                 }
             });
 
