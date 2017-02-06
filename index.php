@@ -965,7 +965,7 @@ include_once 'controller/showAllSong.php';
             </div>
         </footer>-->
         
-        <div id="showModal" style="    position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;overflow: auto;z-index: 1;padding: 20px;box-sizing: border-box;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.75);text-align: center;">
+        <!--<div id="showModal" style="    position: fixed;top: 0;right: 0;bottom: 0;left: 0;width: 100%;height: 100%;overflow: auto;z-index: 1;padding: 20px;box-sizing: border-box;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.75);text-align: center;">
             <div rel="modal:open"  style="display: block; top: 22%;bottom: 20%;overflow: hidden;left: 32%;width: 500px !important;height: 450px;background-color: #ffffff;position: fixed;border-radius: 8px;">
                 <p style="color: #000000;margin-top: 15px;"><?php echo $user->getTitleModal() ?></p>
                 <img src="<?php echo $user->getImgModal() ?>" />

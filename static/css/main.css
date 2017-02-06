@@ -3129,7 +3129,7 @@ body.is-menu-visible #menu {
 
 #header nav > ul > li > a {
     border: 0;
-    color: #000;
+    color: #fff;
     display: block;
     font-size: 0.8em;
     letter-spacing: 0.225em;
@@ -3185,7 +3185,7 @@ body.is-menu-visible #menu {
 .language {
     display: inline-block;
     border: 0;
-    color: #000;
+    color: #fff;
     font-size: 0.8em;
     letter-spacing: 0.225em;
     padding: 0 1.5em;
@@ -3760,7 +3760,7 @@ ul.nostyle i {
 
 /*start home*/
 .imgHome{
-    background-image: url("../images/header/fondo.png");
+    background-image: url("../images/header/header2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
