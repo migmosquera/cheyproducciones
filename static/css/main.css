@@ -3092,6 +3092,20 @@ body.is-menu-visible #menu {
     margin: 0 auto;
 }
 
+#header h2 {
+    -moz-transition: opacity 0.2s ease;
+    -webkit-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+    height: inherit;
+    line-height: inherit;
+    position: absolute;
+    
+}
+
 #header h1 a {
     border: 0;
     display: block;
@@ -3177,23 +3191,19 @@ body.is-menu-visible #menu {
     margin-left: 0;
 }
 
-.cont_logo {
-    display: block;
-    margin-top: 30px;
-}
-
 .language {
-    display: inline-block;
-    border: 0;
     color: #fff;
-    font-size: 0.8em;
     letter-spacing: 0.225em;
-    padding: 0 1.5em;
     text-transform: uppercase;
+    font-family: Helvetica;
+    font-size: 0.8em;
+    font-weight: 300;
+    padding: 0 1.5em;
+    cursor: pointer;
 }
 
 #header.alt {
-    background: transparent;
+   background-color: rgba(0,0,0,0.4);
 }
 
 #header.alt h1 {
@@ -3205,6 +3215,10 @@ body.is-menu-visible #menu {
 }
 
 /* Banner */
+
+.titleStyle {
+    margin: 0 auto;
+}
 
 #banner {
     display: -moz-flex;
@@ -3764,7 +3778,6 @@ ul.nostyle i {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 990px;
 }
 /*end home*/
 /*#bar {
