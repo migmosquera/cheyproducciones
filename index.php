@@ -48,10 +48,9 @@ include_once 'controller/showAllSong.php';
         </header>
 
         <section id="banner" class="imgHome">
-            <div>
+            <div style="background-color: rgba(48, 138, 138, 0.6)">
                 <h2 class="titleStyle">Chei producciones</h2> 
             </div>
-            
         </section>
         
         <section style="background-color:#ffffff; display: block; text-align: center">
@@ -69,8 +68,9 @@ include_once 'controller/showAllSong.php';
 
             </div>
         </section>
-        <section id="banner" style="width: 100%; height: 800px; background-color: #fbfbfb">
 
+        <section style="background-color:#ffffff; display: block;height: 990px">
+            
         </section>
 
 <!--<section id="features">

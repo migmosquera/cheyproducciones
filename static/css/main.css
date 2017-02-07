@@ -2975,7 +2975,7 @@ table.alt tfoot {
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
     -webkit-overflow-scrolling: touch;
-    background: #21b2a6;
+    background: rgba(48, 138, 138, 1);
     color: #ffffff;
     height: 100%;
     max-width: 80%;
@@ -3203,7 +3203,7 @@ body.is-menu-visible #menu {
 }
 
 #header.alt {
-   background-color: rgba(0,0,0,0.4);
+   background-color: transparent;
 }
 
 #header.alt h1 {
@@ -3256,6 +3256,7 @@ body.is-menu-visible #menu {
     padding: 0.35em 1em;
     position: relative;
     z-index: 1;
+    margin: 15px;
 }
 
 #banner h2:before, #banner h2:after {
