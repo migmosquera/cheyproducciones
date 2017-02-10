@@ -22,9 +22,10 @@ include_once 'controller/showAllSong.php';
     </head>
     <body>
         <header id="header" class="alt">
-            <!--<img src="../cheyproducciones/static/images/header/logochey.png" style="width: 5%; margin-left: 30px">-->
-            <h2 id="language" class="language">es | en</h2>
+            <!--<img src="../cheyproducciones/static/images/header/logochey.png" style="width: 5%; margin-left: 30px">
+            <h2 id="language" class="language">es | en</h2>-->
             <h1><a href="index.php"><img src="../cheyproducciones/static/images/header/LOGOCHEY174POR39.png" style=" padding: 10px"></a></h1>
+            <img class="styleAbove" src="../cheyproducciones/static/images/speaker.png" alt="">
             <nav id="nav">
                 <ul>
                     <li class="special">
@@ -47,10 +48,9 @@ include_once 'controller/showAllSong.php';
             </div>-->
         </header>
 
-        <section id="banner" class="imgHome">
-            <div style="">
-                <h2 class="titleStyle">Chei producciones</h2> 
-            </div>
+        <section class="imgHome">
+            <p>Chei producciones</p>
+            <img class="styleDown" src="../cheyproducciones/static/images/down-arrow.png" alt="">
         </section>
         
         <section style="background-color:#ffffff; display: block; text-align: center">
